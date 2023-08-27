@@ -9,7 +9,7 @@ phases:
 
   build:
     commands:
-      - git clone https://github.com/ZainHaiderPablo/sql_sample/tree/main /tmp/repo
+      - git clone https://github.com/ZainHaiderPablo/sql_sample /tmp/repo
       - python /tmp/repo/lambda_function.py
 
 artifacts:
