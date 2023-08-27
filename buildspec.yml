@@ -9,8 +9,13 @@ phases:
 
   build:
     commands:
-      - git clone https://github.com/ZainHaiderPablo/sql_sample /tmp/repo
-      - python /tmp/repo/SqlTrigger
+      # Your build commands here
+
+      # Create a trigger file
+      - echo "Trigger Lambda" > trigger.txt
+
+      # Upload the trigger file to S3
+      - aws s3 cp trigger.txt s3://lambdatrigger1/
 
 artifacts:
-  files: /tmp/repo/lambda_function.py
+  files: trigger.txt
